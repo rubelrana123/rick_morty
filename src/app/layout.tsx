@@ -23,11 +23,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
+    <html lang="en" >
+      <body suppressHydrationWarning
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+                 <main className="h-screen h-max-[600px] place-items-center place-content-center">
+                    {children}
+               </main>
       </body>
     </html>
   );
